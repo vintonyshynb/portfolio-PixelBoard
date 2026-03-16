@@ -77,9 +77,9 @@ board.addEventListener("dblclick", (e) => {
     let text = prompt("Treść notatki")
     if (!text) return
 
-    let color = prompt("Kolor HEX np. #fffaaa", "#fffaaa")
+    let color = prompt("Color HEX ex. #fffaaa", "#fffaaa")
 
-    let textColor = prompt("Kolor HEX dla tekstu")
+    let textColor = prompt("Color HEX for text")
 
     let data = new FormData()
     data.append("content", text)
@@ -105,13 +105,13 @@ function deleteNote(id, el) {
 }
 
 function editNote(note, el) {
-    let newText = prompt("Edytuj treść", note.content)
+    let newText = prompt("Edit contents", note.content)
     if (newText === null) return
 
-    let newColor = prompt("Edytuj kolor HEX", note.color)
+    let newColor = prompt("Edit color HEX", note.color)
     if (newColor === null) return
 
-    let newTextColor = prompt("Edytuj kolor tekstu HEX", note.textColor)
+    let newTextColor = prompt("Edit color for text HEX", note.textColor)
     if (newTextColor === null) return
 
     let data = new FormData()
